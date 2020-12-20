@@ -2,15 +2,23 @@ import React from "react";
 import {View, StyleSheet, Image} from "react-native";
 
 import AppText from "../components/AppText";
+import ListItem from "../components/ListItem";
 import colors from "../config/colors";
 
 export default function ListingDetailsScreen() {
   return (
-    <View>
+    <View style={styles.container}>
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>Red Jacket for sale</AppText>
         <AppText style={styles.price}>$100</AppText>
+        <View style={styles.userContainer}>
+          <ListItem
+            image={require("../assets/mosh.jpg")}
+            title='Thomas Otim'
+            subTitle='4 listings'
+          />
+        </View>
       </View>
     </View>
   );
@@ -33,5 +41,8 @@ const styles = StyleSheet.create({
     color: colors.secondary,
     fontWeight: "bold",
     fontSize: 20,
+  },
+  userContainer: {
+    marginTop: 30,
   },
 });
