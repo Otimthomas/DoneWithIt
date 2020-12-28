@@ -17,7 +17,7 @@ export default function AppTextInput({icon, ...otherProps}) {
         />
       )}
       <TextInput
-        style={defaultStyles.text}
+        style={[defaultStyles.text, styles.textInput]}
         placeholder='firstName'
         onChangeText={(text) => setFirstName(text)}
         {...otherProps}
@@ -38,5 +38,7 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 5,
   },
-  textInput: {},
+  textInput: {
+    flex: 1,
+  },
 });
