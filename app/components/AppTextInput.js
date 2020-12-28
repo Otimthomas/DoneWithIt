@@ -3,6 +3,7 @@ import {View, StyleSheet, TextInput, Platform} from "react-native";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 
 import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 export default function AppTextInput({icon, ...otherProps}) {
   const [firstName, setFirstName] = React.useState("");
@@ -17,7 +18,7 @@ export default function AppTextInput({icon, ...otherProps}) {
         />
       )}
       <TextInput
-        style={styles.textInput}
+        style={defaultStyles.text}
         placeholder='firstName'
         onChangeText={(text) => setFirstName(text)}
         {...otherProps}
@@ -38,9 +39,5 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 5,
   },
-  textInput: {
-    color: colors.dark,
-    fontSize: 18,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-  },
+  textInput: {},
 });

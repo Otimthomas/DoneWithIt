@@ -3,7 +3,7 @@ import {View, StyleSheet, Image} from "react-native";
 
 import AppText from "../components/AppText";
 import ListItem from "../components/ListItem";
-import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 export default function ListingDetailsScreen() {
   return (
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   price: {
-    color: colors.secondary,
+    color: defaultStyles.colors.secondary,
     fontWeight: "bold",
     fontSize: 20,
   },

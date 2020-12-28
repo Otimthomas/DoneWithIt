@@ -1,7 +1,7 @@
 import React from "react";
 import {View, StyleSheet, Image, TouchableHighlight} from "react-native";
 import Swipeable from "react-native-gesture-handler/Swipeable";
-import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 import AppText from "./AppText";
 
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   listItem: {
     flexDirection: "row",
     padding: 10,
-    backgroundColor: colors.white,
+    backgroundColor: defaultStyles.colors.white,
   },
   image: {
     width: 70,
@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   subTitle: {
-    color: colors.gray,
+    color: defaultStyles.colors.gray,
   },
 });

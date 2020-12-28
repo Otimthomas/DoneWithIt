@@ -1,21 +1,15 @@
 import React from "react";
 import {StyleSheet} from "react-native";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import AppTextInput from "./app/components/AppTextInput";
+import Screen from "./app/components/Screen";
 
 export default function App() {
   return (
-    <WelcomeScreen />
-    // <ViewImageScreen />
+    <Screen>
+      <AppTextInput icon='email' placeholder='First Name' />
+    </Screen>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "yellow",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({});
